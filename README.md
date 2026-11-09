@@ -1,32 +1,16 @@
-# Joaquin Castrillon Portfolio
+# Joaquin Castrillon — Portfolio
 
-A full-screen interactive terminal portfolio built with React and Vite.
+A scroll-driven 3D portfolio: a "neural cosmos" built with Three.js and TypeScript sits behind
+regular, accessible HTML sections. Scrolling flies the camera along a spline through a network of
+glowing nodes, with one beacon per section.
 
-## Available commands
-
-- `start`
-- `about`
-- `education`
-- `experience`
-- `skills`
-- `projects`
-- `contact`
-- `help`
-- `clear`
-
-## Local development
+- **Stack:** Vite, TypeScript, Three.js (custom GLSL shaders, bloom post-processing)
+- **Content:** plain HTML in `index.html`, so it stays readable, indexable and works without WebGL
+- **Scene:** `src/scene/cosmos.ts`; scroll mapping and UI in `src/main.ts`
+- Respects `prefers-reduced-motion`; lighter particle counts and pixel ratio on phones
 
 ```bash
 npm install
 npm run dev
-```
-
-## Production build
-
-```bash
 npm run build
 ```
-
-## GitHub Pages
-
-This repo includes a GitHub Actions workflow that builds the Vite app and deploys the `dist` folder to GitHub Pages on every push to `main`.

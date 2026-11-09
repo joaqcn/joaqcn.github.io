@@ -4,10 +4,277 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joaquin Castrillon | Terminal Portfolio</title>
+    <meta name="theme-color" content="#05060a" />
+    <meta
+      name="description"
+      content="Joaquin Castrillon — Python and cloud engineer building AI-enabled services on AWS. M.S. in Artificial Intelligence at UT Austin."
+    />
+    <title>Joaquin Castrillon | Cloud & AI Engineer</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="cosmos" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+    <header class="nav">
+      <a class="brand" href="#hero" aria-label="Joaquin Castrillon, home">JC<span>.</span></a>
+      <nav aria-label="Primary">
+        <a href="#about" data-nav="about">About</a>
+        <a href="#experience" data-nav="experience">Experience</a>
+        <a href="#projects" data-nav="projects">Projects</a>
+        <a href="#skills" data-nav="skills">Skills</a>
+        <a href="#education" data-nav="education">Education</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="stop" data-stop>
+        <div class="col">
+          <p class="eyebrow">Orlando, FL</p>
+          <h1>Joaquin<br />Castrillon</h1>
+          <p class="lead">
+            I build the cloud services behind AI-enabled healthcare software, and I'm studying
+            how the models themselves work.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#projects">See my work</a>
+            <a class="btn" href="#contact">Get in touch</a>
+          </div>
+          <p class="hint"><span class="hint-line"></span>Scroll to travel through the network</p>
+        </div>
+      </section>
+
+      <section id="about" class="stop" data-stop>
+        <div class="col">
+          <p class="eyebrow">01 · About</p>
+          <h2>Python engineer, cloud first, AI bound.</h2>
+          <div class="panel">
+            <p>
+              2+ years building serverless REST APIs and hybrid cloud integrations that support
+              AI-enabled applications in a regulated, production healthcare environment. I
+              automate the boring parts, lock down IAM, and ship through pipelines that fail
+              loudly before production does.
+            </p>
+            <p>
+              Now pursuing an M.S. in Artificial Intelligence at UT Austin and holding the AWS
+              Certified AI Practitioner credential. Outside of work I'm usually playing action
+              RPGs and thinking about game mechanics.
+            </p>
+          </div>
+          <ul class="stats" aria-label="Impact highlights">
+            <li><b data-count="70" data-suffix="%">70%</b><span>faster environment provisioning</span></li>
+            <li><b data-count="40" data-suffix="%">40%</b><span>fewer release errors</span></li>
+            <li><b data-count="10000" data-suffix="+">10,000+</b><span>documents automated</span></li>
+            <li><b data-count="20" data-suffix="+">20+</b><span>AWS resources as code</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="experience" class="stop" data-stop>
+        <div class="col">
+          <p class="eyebrow">02 · Experience</p>
+          <h2>Where I've built things.</h2>
+          <ol class="timeline">
+            <li class="panel">
+              <div class="row">
+                <h3>Software Engineer Associate</h3>
+                <time>Jan 2025 – Present</time>
+              </div>
+              <p class="org">Leidos QTC Health Services · Orlando, FL</p>
+              <ul>
+                <li>Ship serverless REST APIs on AWS Lambda and hybrid cloud integrations between on-prem and cloud systems.</li>
+                <li>Maintain reusable Terraform modules for 20+ AWS resources, cutting provisioning time by 70%.</li>
+                <li>Built CI/CD pipelines that decreased release errors by 40%.</li>
+                <li>Deploy containerized services on Kubernetes with least-privilege IAM and VPC networking.</li>
+              </ul>
+            </li>
+            <li class="panel">
+              <div class="row">
+                <h3>Software Engineer Intern</h3>
+                <time>Jun – Dec 2024</time>
+              </div>
+              <p class="org">Leidos QTC Health Services · Orlando, FL</p>
+              <ul>
+                <li>Automated document workflows for 10,000+ documents, reducing manual workload by 60%.</li>
+                <li>Tuned AWS search indexing, improving indexing performance by 35%.</li>
+              </ul>
+            </li>
+            <li class="panel">
+              <div class="row">
+                <h3>Undergraduate Research Assistant</h3>
+                <time>Aug 2023 – Apr 2024</time>
+              </div>
+              <p class="org">University of Central Florida</p>
+              <ul>
+                <li>Refactored 15,000+ lines of legacy code in a Department of Transportation application used to manage highway materials.</li>
+              </ul>
+            </li>
+            <li class="panel">
+              <div class="row">
+                <h3>Engineering Intern</h3>
+                <time>Jul 2022 – Aug 2023</time>
+              </div>
+              <p class="org">Siemens Energy · Orlando, FL</p>
+              <ul>
+                <li>Built VBA automation tools and analyzed data in Python for $1M+ projects.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="projects" class="stop" data-stop>
+        <div class="col">
+          <p class="eyebrow">03 · Projects</p>
+          <h2>Selected work.</h2>
+          <div class="cards">
+            <article class="panel card">
+              <div class="row">
+                <h3>Serverless Document Pipeline</h3>
+                <span class="tag">Public</span>
+              </div>
+              <p>
+                Event-driven pipeline fully provisioned with Terraform. S3 uploads trigger Lambda,
+                which stores file metadata in DynamoDB and serves it through API Gateway, with
+                CloudWatch alarms and SNS alerting.
+              </p>
+              <ul class="chips"><li>Terraform</li><li>Lambda</li><li>DynamoDB</li><li>API Gateway</li><li>GitHub Actions</li></ul>
+              <a class="link" href="https://github.com/joaqcn/aws-serverless-doc-pipeline" target="_blank" rel="noopener">View on GitHub →</a>
+            </article>
+
+            <article class="panel card">
+              <div class="row">
+                <h3>Service Monitoring API</h3>
+                <span class="tag">Public</span>
+              </div>
+              <p>
+                Flask and PostgreSQL API that registers endpoints, runs health checks, and exposes
+                Prometheus metrics. Multi-stage non-root Docker image, Compose with health-gated
+                dependencies, and a CI pipeline that scans with Trivy and publishes to GHCR.
+              </p>
+              <ul class="chips"><li>Docker</li><li>Compose</li><li>PostgreSQL</li><li>Prometheus</li><li>Trivy</li></ul>
+              <a class="link" href="https://github.com/joaqcn/docker-service-monitor" target="_blank" rel="noopener">View on GitHub →</a>
+            </article>
+
+            <article class="panel card">
+              <div class="row">
+                <h3>AI CAD Configurator</h3>
+                <span class="tag private">Private</span>
+              </div>
+              <p>
+                Parametric CAD generator that produces manufacturable STEP and STL models from
+                parameters or plain-English descriptions, using a local AI parser. Python and
+                CadQuery on the backend, Three.js in the browser.
+              </p>
+              <ul class="chips"><li>Python</li><li>CadQuery</li><li>TypeScript</li><li>Three.js</li><li>Local AI</li></ul>
+            </article>
+
+            <article class="panel card">
+              <div class="row">
+                <h3>AI Stock Charting</h3>
+                <span class="tag private">Private</span>
+              </div>
+              <p>
+                Windows desktop charting application with AI-assisted pattern detection on
+                market data.
+              </p>
+              <ul class="chips"><li>Desktop</li><li>Pattern detection</li><li>Machine learning</li></ul>
+            </article>
+
+            <article class="panel card">
+              <div class="row">
+                <h3>Game &amp; Simulation Lab</h3>
+                <span class="tag">Public</span>
+              </div>
+              <p>
+                Game and AI experiments from my CS degree: a Unity simulation of the Boston
+                Dynamics Spot robot driven by Oculus Quest 3 controllers, an FPS, a Mario-playing
+                AI, and a Tamagotchi-style digital pet.
+              </p>
+              <ul class="chips"><li>Unity</li><li>VR</li><li>Game AI</li><li>C#</li></ul>
+              <p class="links">
+                <a class="link" href="https://github.com/joaqcn/spot-vr2" target="_blank" rel="noopener">Spot VR →</a>
+                <a class="link" href="https://github.com/joaqcn/MAGIC-FPS" target="_blank" rel="noopener">MAGIC-FPS →</a>
+                <a class="link" href="https://github.com/joaqcn/mario-ai" target="_blank" rel="noopener">Mario AI →</a>
+                <a class="link" href="https://github.com/joaqcn/digital-pet" target="_blank" rel="noopener">Digital Pet →</a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="stop" data-stop>
+        <div class="col">
+          <p class="eyebrow">04 · Skills</p>
+          <h2>The toolkit.</h2>
+          <div class="skill-groups">
+            <div class="panel">
+              <h3>Cloud &amp; Infrastructure</h3>
+              <ul class="chips"><li>AWS</li><li>Lambda</li><li>S3</li><li>DynamoDB</li><li>API Gateway</li><li>EC2</li><li>RDS</li><li>VPC</li><li>IAM</li><li>CloudWatch</li><li>OpenSearch</li><li>Terraform</li><li>Serverless</li><li>Event-driven</li></ul>
+            </div>
+            <div class="panel">
+              <h3>DevOps</h3>
+              <ul class="chips"><li>CI/CD</li><li>GitHub Actions</li><li>Docker</li><li>Kubernetes</li><li>Prometheus</li><li>Monitoring</li><li>Git</li><li>Jira</li></ul>
+            </div>
+            <div class="panel">
+              <h3>Data &amp; AI/ML</h3>
+              <ul class="chips"><li>Python</li><li>PyTorch</li><li>scikit-learn</li><li>pandas</li><li>NumPy</li><li>MongoDB</li><li>REST APIs</li></ul>
+            </div>
+            <div class="panel">
+              <h3>Also</h3>
+              <ul class="chips"><li>TypeScript</li><li>Three.js</li><li>Unity</li><li>C#</li><li>Java</li><li>C</li></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="stop" data-stop>
+        <div class="col">
+          <p class="eyebrow">05 · Education</p>
+          <h2>Always learning.</h2>
+          <div class="panel edu">
+            <div class="row">
+              <h3>M.S. in Artificial Intelligence</h3>
+              <time>Expected 2028</time>
+            </div>
+            <p class="org">The University of Texas at Austin · Online</p>
+            <p>Coursework includes Deep Learning.</p>
+          </div>
+          <div class="panel edu">
+            <div class="row">
+              <h3>B.S. in Computer Science</h3>
+              <time>Dec 2024</time>
+            </div>
+            <p class="org">University of Central Florida · GPA 3.70 · Dean's List</p>
+            <p>Distributed Systems, Operating Systems, Computer Networks, Database Systems, Machine Learning, Algorithms.</p>
+          </div>
+          <div class="panel edu">
+            <div class="row">
+              <h3>AWS Certified AI Practitioner</h3>
+            </div>
+            <p class="org">Amazon Web Services</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="stop" data-stop>
+        <div class="col">
+          <p class="eyebrow">06 · Contact</p>
+          <h2>Let's build something.</h2>
+          <p class="lead">
+            Open to conversations about cloud, platform and AI engineering roles.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="mailto:joaqcn@gmail.com">joaqcn@gmail.com</a>
+            <a class="btn" href="https://www.linkedin.com/in/jcastrillonn/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/joaqcn" target="_blank" rel="noopener">GitHub</a>
+          </div>
+          <footer>© <span id="year"></span> Joaquin Castrillon</footer>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
